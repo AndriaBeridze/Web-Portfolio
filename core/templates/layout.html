@@ -13,6 +13,13 @@
         {% endblock %}
     </head>
     <body id="{{ active_page }}">
+        <div class="loading-screen" id="loading-screen">
+            <div class="loading-bg-image">
+                <img src="{% static 'icons/logo.svg' %}" alt="loading-bg">
+            </div>
+            <script src="{% static 'js/loading-screen.js' %}"></script>
+        </div>
+        </div>
         <header class="header" id="header">
             <a href="{% url 'core:home' %}" class="header-logo">
                 <img src="{% static 'icons/logo.svg' %}" alt="logo">
@@ -41,7 +48,9 @@
             </div>
             <script src="{% static 'js/nav.js' %}"></script>
         </header>
-        {% block content %}
-        {% endblock %}
+        <main class="main" id="main">
+            {% block content %}
+            {% endblock %}
+        </main>
     </body>
 </html>

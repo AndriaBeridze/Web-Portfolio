@@ -5,6 +5,19 @@
     src: url("../fonts/Quicksand-Medium.ttf");
 }
 
+@keyframes pulse {
+    0% {
+        scale: 1;
+        opacity: 0.4;
+    } 50% {
+        scale: 1.2;
+        opacity: 1;
+    } 100% {
+        scale: 1;
+        opacity: 0.4;
+    }
+}
+
 :root {
     --bg-color: #0c0d1a;
     --text-color: #fbfaee;

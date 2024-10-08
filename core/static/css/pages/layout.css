@@ -38,7 +38,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 var(--header-padding-x)
+    padding: 0 var(--header-padding-x);
+    z-index: 1000;
 }
 
 .header-logo {
@@ -104,4 +105,39 @@ header {
 .nav-toggler:hover {
     background-color: var(--text-color);
     color: var(--bg-color);
+}
+
+.main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 10000;
+    overflow: hidden;
+    border-bottom: var(--default-border);
+}
+
+.loading-bg-image {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-bg-image img {
+    height: 100px;
+    animation: pulse 1.5s infinite;
 }

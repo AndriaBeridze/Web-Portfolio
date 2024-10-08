@@ -3,5 +3,16 @@
 
 {% block title %}Home{% endblock %}
 
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/pages/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive/home.css' %}">
+{% endblock %}
+
 {% block content %}
+    <section class="hero-section">
+        <div class="hero-background" id="hero-background">
+            
+        </div>
+        <script src="{% static 'js/hero-section.js' %}"></script>
+    </section>
 {% endblock %}
