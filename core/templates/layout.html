@@ -5,13 +5,42 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %} {% endblock %}</title>
+        <link rel="shortcut icon" href="{% static 'icons/logo.svg' %}" type="image/x-icon">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
         <link rel="stylesheet" href="{% static 'css/pages/layout.css' %}">
         <link rel="stylesheet" href="{% static 'css/responsive/layout.css' %}">
         {% block css %}
         {% endblock %}
     </head>
-    <body>
+    <body id="{{ active_page }}">
+        <header class="header" id="header">
+            <a href="{% url 'core:home' %}" class="header-logo">
+                <img src="{% static 'icons/logo.svg' %}" alt="logo">
+            </a>
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li class="nav-item" id="home-page">
+                        <a href="{% url 'core:home' %}" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item" id="about-page">
+                        <a href="#" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item" id="portfolio-page">
+                        <a href="#" class="nav-link">Portfolio</a>
+                    </li>
+                    <li class="nav-item" id="contact-page">
+                        <a href="#" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item special">
+                        <a href="#" class="nav-link">Hire me</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="nav-toggler">
+                <i class="bi bi-list"></i>
+            </div>
+            <script src="{% static 'js/nav.js' %}"></script>
+        </header>
         {% block content %}
         {% endblock %}
     </body>

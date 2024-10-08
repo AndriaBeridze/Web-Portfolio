@@ -1,0 +1,23 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+@font-face {
+    font-family: "QuickSand";
+    src: url("../fonts/Quicksand-Medium.ttf");
+}
+
+:root {
+    --bg-color: #0c0d1a;
+    --text-color: #fbfaee;
+    --primary-color: #fdb329;
+
+    --header-height: 55px;
+    --header-padding-x: 120px;
+    --nav-gap: 60px;
+    --nav-toggler-side-length: 36px;
+    
+    --default-border: 1px solid #1d2439;
+
+    --primary-font: "QuickSand", sans-serif;
+
+    --transition-duration: 0.3s;
+}
